@@ -7,11 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-
 @RestController
 @RequestMapping("/api")
 public class MyRestController {
-
     @Autowired
     private EmployeeService employeeService;
 
@@ -42,6 +40,7 @@ public class MyRestController {
     public Employee updateEmployee(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
         return employee;
+
     }
 
     @DeleteMapping("/employees/{id}")
